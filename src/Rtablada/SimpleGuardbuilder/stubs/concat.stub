@@ -1,0 +1,2 @@
+guard :concat, :type => "css", :files => %w[{{styleFiles}}], :input_dir => "public/src/css", :output => "public/assets/css/{{pipelineName}}"
+guard :concat, :type => "js", :files => %w[{{scriptFiles}}], :input_dir => "public/src/js", :output => "public/src/js/{{pipelineName}}"
