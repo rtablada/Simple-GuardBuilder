@@ -1,6 +1,6 @@
 {
     "name": "rtablada/simple-guardbuilder",
-    "description": "",
+    "description": "This is a simple package to create a Guardfile for your project based on config",
     "authors": [
         {
             "name": "Ryan Tablada",
