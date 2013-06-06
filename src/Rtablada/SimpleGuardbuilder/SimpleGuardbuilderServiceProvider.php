@@ -18,7 +18,13 @@ class SimpleGuardbuilderServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['guard.deploy'] = $this->app->share(function($app)
+		{
+			$builder = new GuardBuilder($app['files'], $app['config']);
+			return new GuardfileDeployCommand($builder);
+		});
+
+		$this->registerCommands();
 	}
 
 	/**
@@ -29,6 +35,18 @@ class SimpleGuardbuilderServiceProvider extends ServiceProvider {
 	public function provides()
 	{
 		return array();
+	}
+
+	/**
+	 * Make commands visible to Artisan
+	 *
+	 * @return void
+	 */
+	protected function registerCommands()
+	{
+		$this->commands(
+			'guard.deploy'
+		);
 	}
 
 }
