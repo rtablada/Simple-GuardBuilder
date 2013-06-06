@@ -47,23 +47,4 @@ class GuardfileDeployCommand extends Command {
 	{
 		$this->builder->buildGuardFile();
 	}
-
-	/**
-	 * Get the console command arguments.
-	 *
-	 * @return array
-	 */
-	protected function getArguments()
-	{
-	}
-
-	/**
-	 * Get the console command options.
-	 *
-	 * @return array
-	 */
-	protected function getOptions()
-	{
-	}
-
 }

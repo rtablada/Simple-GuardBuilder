@@ -27,6 +27,11 @@ class SimpleGuardbuilderServiceProvider extends ServiceProvider {
 		$this->registerCommands();
 	}
 
+	public function boot()
+	{
+		$this->package('rtablada/simple-guardbuilder');
+	}
+
 	/**
 	 * Get the services provided by the provider.
 	 *
@@ -34,7 +39,7 @@ class SimpleGuardbuilderServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('');
 	}
 
 	/**
