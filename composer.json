@@ -1,6 +1,10 @@
 {
     "name": "rtablada/simple-guardbuilder",
     "description": "This is a simple package to create a Guardfile for your project based on config",
+    "keywords": [
+        "laravel",
+        "guard"
+    ],
     "authors": [
         {
             "name": "Ryan Tablada",
